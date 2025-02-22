@@ -1,0 +1,39 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+venv/
+*.log
+
+# Django
+*.sqlite3
+db.sqlite3
+*.pot
+*.mo
+*.pyc
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Backup
+*~
+*.bak
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Static files
+/static/
+/media/
+
+# Env files (case sensitive)
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
