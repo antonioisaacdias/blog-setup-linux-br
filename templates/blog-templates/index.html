@@ -3,36 +3,145 @@
 
 
 {% block content %}
-<div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'img/img-post-example.png'%}" class="d-block w-100" alt="...">
-        <div class="blur"></div>
-        <div class="carousel-caption">
-          <h2>título do artigo</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+<div class="container index-content">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/img-post-example.png'%}" class="d-block w-100" alt="...">
+          <div class="blur"></div>
+          <div class="carousel-caption">
+            <h2>título do artigo</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+    
         </div>
-  
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <section class="container feed">
+      <span>POSTAGENS RECENTES</span>
+      <div class="container feed-articles">
+        <article class="article-card">
+                  <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
+                <div class="card-body">
+                  <div class="card-data">
+                    <span class="author">
+                      <img src="{% static 'svg/avatar.svg'%}" alt="">
+                      Antonio
+                    </span>
+                    <span class="comments">
+                      <img src="{% static 'svg/comment.svg'%}" alt="">
+                      1
+                    </span class="date">
+                    <span>
+                      <img src="{% static 'svg/calendar.svg'%}" alt="">
+                      22/02/2025
+                    </span>
+                  </div>
+                  <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
+                </div>
+        </article>
+        <article class="article-card">
+          <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
+        <div class="card-body">
+          <div class="card-data">
+            <span class="author">
+              <img src="{% static 'svg/avatar.svg'%}" alt="">
+              Antonio
+            </span>
+            <span class="comments">
+              <img src="{% static 'svg/comment.svg'%}" alt="">
+              1
+            </span class="date">
+            <span>
+              <img src="{% static 'svg/calendar.svg'%}" alt="">
+              22/02/2025
+            </span>
+          </div>
+          <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
+        </div>
+</article>
+<article class="article-card">
+  <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
+<div class="card-body">
+  <div class="card-data">
+    <span class="author">
+      <img src="{% static 'svg/avatar.svg'%}" alt="">
+      Antonio
+    </span>
+    <span class="comments">
+      <img src="{% static 'svg/comment.svg'%}" alt="">
+      1
+    </span class="date">
+    <span>
+      <img src="{% static 'svg/calendar.svg'%}" alt="">
+      22/02/2025
+    </span>
+  </div>
+  <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
 </div>
+</article>
+        <article class="article-card">
+            <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
+            <div class="card-body">
+              <div class="card-data">
+                <span class="author">
+                  <img src="{% static 'svg/avatar.svg'%}" alt="">
+                  Antonio
+                </span>
+                <span class="comments">
+                  <img src="{% static 'svg/comment.svg'%}" alt="">
+                  1
+                </span class="date">
+                <span>
+                  <img src="{% static 'svg/calendar.svg'%}" alt="">
+                  22/02/2025
+                </span>
+              </div>
+              <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
+          </div>
+      </article>
+      <article class="article-card">
+          <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
+        <div class="card-body">
+          <div class="card-data">
+            <span class="author">
+              <img src="{% static 'svg/avatar.svg'%}" alt="">
+              Antonio
+            </span>
+            <span class="comments">
+              <img src="{% static 'svg/comment.svg'%}" alt="">
+              1
+            </span class="date">
+            <span>
+              <img src="{% static 'svg/calendar.svg'%}" alt="">
+              22/02/2025
+            </span>
+          </div>
+          <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
+        </div>
+      </article>
+      </div>
+
+    </section>
+</div>
+
 {% endblock %}
