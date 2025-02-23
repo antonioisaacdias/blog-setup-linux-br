@@ -1,0 +1,18 @@
+.ql-container {
+    min-height: 500px !important; /* Altura mínima */
+    max-width: 100% !important;
+    width: 100rem !important;
+}
+
+.ql-editor {
+    min-height: 500px !important;
+    height: 60rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Forçar o input a ocupar a largura total do formulário */
+.django-quill-widget {
+    width: 100% !important;
+    max-width: 100% !important;
+}
