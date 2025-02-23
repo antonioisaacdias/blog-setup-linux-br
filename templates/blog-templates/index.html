@@ -39,108 +39,28 @@
     <section class="container feed">
       <span>POSTAGENS RECENTES</span>
       <div class="container feed-articles">
-        <article class="article-card">
-                  <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
-                <div class="card-body">
+        {% for post in recent_posts %}
+          <article class="article-card">
+              <img class="img-card" src="{{post.image}}" alt="">
+              <div class="card-content">
                   <div class="card-data">
-                    <span class="author">
-                      <img src="{% static 'svg/avatar.svg'%}" alt="">
-                      Antonio
-                    </span>
-                    <span class="comments">
-                      <img src="{% static 'svg/comment.svg'%}" alt="">
-                      1
-                    </span>
-                    <span class="date">
-                      <img src="{% static 'svg/calendar.svg'%}" alt="">
-                      22/02/2025
-                    </span>
+                      <span class="author">
+                          <img src="{% static 'svg/avatar.svg' %}" alt="">
+                          {{ post.author }} <!-- Exibe o nome do autor -->
+                      </span>
+                      <span class="comments">
+                          <img src="{% static 'svg/comment.svg' %}" alt="">
+                          1 <!-- Substitua por um contador real de comentários -->
+                      </span>
+                      <span class="date">
+                          <img src="{% static 'svg/calendar.svg' %}" alt="">
+                          {{ post.created_at }} <!-- Formata a data de criação -->
+                      </span>
                   </div>
-                  <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
-                </div>
-        </article>
-        <article class="article-card">
-          <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
-        <div class="card-body">
-          <div class="card-data">
-            <span class="author">
-              <img src="{% static 'svg/avatar.svg'%}" alt="">
-              Antonio
-            </span>
-            <span class="comments">
-              <img src="{% static 'svg/comment.svg'%}" alt="">
-              1
-            </span>
-            <span class="date">
-              <img src="{% static 'svg/calendar.svg'%}" alt="">
-              22/02/2025
-            </span>
-          </div>
-          <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
-        </div>
-</article>
-<article class="article-card">
-  <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
-<div class="card-body">
-  <div class="card-data">
-    <span class="author">
-      <img src="{% static 'svg/avatar.svg'%}" alt="">
-      Antonio
-    </span>
-    <span class="comments">
-      <img src="{% static 'svg/comment.svg'%}" alt="">
-      1
-    </span>
-    <span class="date">
-      <img src="{% static 'svg/calendar.svg'%}" alt="">
-      22/02/2025
-    </span>
-  </div>
-  <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
-</div>
-</article>
-        <article class="article-card">
-            <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
-            <div class="card-body">
-              <div class="card-data">
-                <span class="author">
-                  <img src="{% static 'svg/avatar.svg'%}" alt="">
-                  Antonio
-                </span>
-                <span class="comments">
-                  <img src="{% static 'svg/comment.svg'%}" alt="">
-                  1
-                </span>
-                <span class="date">
-                  <img src="{% static 'svg/calendar.svg'%}" alt="">
-                  22/02/2025
-                </span>
+                  <p class="card-text">{{ post.resume }}</p>
               </div>
-              <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
-          </div>
-      </article>
-      <article class="article-card">
-          <img class="img-card" src="{% static 'img/img-post-example.png'%}" alt="">
-        <div class="card-body">
-          <div class="card-data">
-            <span class="author">
-              <img src="{% static 'svg/avatar.svg'%}" alt="">
-              Antonio
-            </span>
-            <span class="comments">
-              <img src="{% static 'svg/comment.svg'%}" alt="">
-              1
-            </span>
-            <span class="date">
-              <img src="{% static 'svg/calendar.svg'%}" alt="">
-              22/02/2025
-            </span>
-          </div>
-          <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
-        </div>
-      </article>
-      </div>
-
+          </article>
+        {% endfor %}
     </section>
 </div>
 

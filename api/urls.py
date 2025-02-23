@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import PostsView
+from .views import RecentPostsView
 
 urlpatterns = [
-    path('posts/', PostsView.as_view(), name='posts')
+    path('recent-posts/', RecentPostsView.as_view(), name='recent-posts')
 ]

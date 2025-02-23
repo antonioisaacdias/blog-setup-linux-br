@@ -7,6 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False, verbose_name='Título')
     subject = models.CharField(max_length=100, null=False, blank=False, verbose_name= 'Assunto')
     author = models.CharField(max_length=80, null=False, blank=False, verbose_name='Autor')
+    resume = models.TextField(null=False, blank=False, verbose_name='Resumo')
     content = QuillField(blank=True, null=True, verbose_name='Conteúdo')
     created_at = models.DateTimeField(auto_now_add=True, null=False, blank=False, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, null=False, verbose_name='Atualizado em')
