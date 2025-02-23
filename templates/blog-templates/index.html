@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
 <div id="carouselExampleIndicators" class="carousel slide">
@@ -9,7 +11,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="{% static 'img/img-post-example.png'%}" class="d-block w-100" alt="...">
+        <div class="blur"></div>
+        <div class="carousel-caption">
+          <h2>título do artigo</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+  
       </div>
       <div class="carousel-item">
         <img src="..." class="d-block w-100" alt="...">
