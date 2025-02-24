@@ -80,31 +80,35 @@
                 <img src="{% static 'svg/star.svg'%}" alt="">
                 <h3>Outros artigos</h3>
               </div>
+              {% for post in others_posts%}
               <div class="others-articles-card card bg-light">
                 <div class="container img-wrapper">
-                  <img src="{% static 'img/img-post-example.png'%}" alt="">
+                  <img src="{{post.image}}" alt="">
                   <div class="overlay">
-                    <h6 class="article-title">título</h6>
+                    <h6 class="article-title">{{post.title}}</h6>
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="card-data">
                     <span class="author">
                       <img src="{% static 'svg/avatar.svg'%}" alt="">
-                      Antonio
+                      {{post.author}}
                     </span>
                     <span class="comments">
                       <img src="{% static 'svg/comment.svg'%}" alt="">
-                      1
+                      0
                     </span>
                     <span class="date">
                       <img src="{% static 'svg/calendar.svg'%}" alt="">
-                      22/02/2025
+                      {{post.created_at}}
                     </span>
                   </div>
-                  <p class="card-text">Meu nome é Antonio, sou natural e residente na cidade de João pessoa na paraíba. Formado em Administração de empresas pela Universidade Federal da Paraíba - UFPB e atualmente estudante do curso de Sistemas para Internet ...</p>
+                  <p class="card-text">
+                    {{post.resume}}
+                  </p>
                 </div>
               </div>
+              {% endfor%}
             </section>
           </aside>
         </div>
