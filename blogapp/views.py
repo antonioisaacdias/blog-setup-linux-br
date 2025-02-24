@@ -1,25 +1,27 @@
+from django.conf import settings
 import requests
-from datetime import datetime
 from django.shortcuts import render
+from .services.index_services import format_datatime
 
 def index(request):
-    api_url = 'http://localhost:8000/api/recent-posts/'
-
+    api_url = settings.API_BASE_URL + 'index/'
     try:
         response = requests.get(api_url)
         response.raise_for_status()
-        posts = response.json()
+        response_json = response.json()
 
-        for post in posts:
-            date_string = post['created_at']
-            date_object = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%fZ")
-            formatted_date = date_object.strftime("%d/%m/%y às %H:%M")
-            post['created_at'] = formatted_date 
+        recent_posts = format_datatime(response_json['recent_posts'])
+        carousel_posts = response_json["highlighted_posts"]
+        others_posts = format_datatime(response_json["others_posts"])
 
     except requests.exceptions.RequestException as e:
-        posts = []
+        recent_posts = []
         print(f'Erro na requisição da API: {e}')
 
-    return render(request, 'blog-templates/index.html', {'recent_posts': posts})
+    return render(request, 'blog-templates/index.html', {
+        'recent_posts': recent_posts,
+        'carousel_posts': carousel_posts,
+        'others_posts': others_posts,
+    })
 
 

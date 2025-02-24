@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import RecentPostsView
+from .views import IndexView
 
 urlpatterns = [
-    path('recent-posts/', RecentPostsView.as_view(), name='recent-posts')
+    path('index/', IndexView.as_view(), name='index')
 ]
