@@ -25,3 +25,6 @@ class IndexView(APIView):
 
         except Exception as e:
             return Response({'error': str(e)}, status=400)
+
+class PostView(APIView):
+    pass
