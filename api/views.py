@@ -1,7 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import RecentPostsSerializer, HighlightedPostsSerializer
-from .services.post_service import get_recent_posts, get_highlighted_posts
+from rest_framework.exceptions import NotFound
+from .serializers import RecentPostsSerializer, HighlightedPostsSerializer, PostSerializer
+from .services.post_service import get_recent_posts, get_highlighted_posts, get_post_by_slug
 
 class IndexView(APIView):
     def get(self, request):
@@ -27,4 +28,10 @@ class IndexView(APIView):
             return Response({'error': str(e)}, status=400)
 
 class PostView(APIView):
-    pass
+    def get(self, request, slug):
+        post = get_post_by_slug(slug=slug)
+        if not post:
+            raise NotFound("Post not found with the given slug.")
+        
+        serialized = PostSerializer(post).data
+        return Response(serialized)
