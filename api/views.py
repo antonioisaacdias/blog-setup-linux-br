@@ -9,7 +9,7 @@ class IndexView(APIView):
             recent_posts = get_recent_posts(5)
             serializer_recents = RecentPostsSerializer(recent_posts, many=True).data
 
-            highlighted_posts = get_highlighted_posts()
+            highlighted_posts = get_highlighted_posts(3)
             serializer_highlighted = HighlightedPostsSerializer(highlighted_posts, many=True).data
 
             others_posts = get_recent_posts(3)
