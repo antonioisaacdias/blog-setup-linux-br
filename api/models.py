@@ -6,7 +6,7 @@ from django.utils.text import slugify
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False, null=False, blank=False, unique=True)
     title = models.CharField(max_length=100, null=False, blank=False, verbose_name='Título', unique=True)
-    slug = models.SlugField(blank=True ,unique=True)  # O slug será gerado automaticamente
+    slug = models.SlugField(blank=True ,unique=True)
     subject = models.CharField(max_length=100, null=False, blank=False, verbose_name= 'Assunto')
     author = models.CharField(max_length=80, null=False, blank=False, verbose_name='Autor')
     resume = models.TextField(null=False, blank=False, verbose_name='Resumo')

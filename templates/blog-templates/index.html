@@ -36,7 +36,7 @@
       <span>POSTAGENS RECENTES</span>
       <div class="container feed-articles">
         {% for post in recent_posts %}
-          <article class="article-card">
+          <article class="article-card" data-url="{% url 'post' slug=post.slug %}" onclick="window.location.href=this.dataset.url">
               <img class="img-card" src="{{post.image}}" alt="">
               <div class="card-content">
                   <div class="card-data">
