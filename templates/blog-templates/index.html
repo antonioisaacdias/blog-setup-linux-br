@@ -42,15 +42,15 @@
                   <div class="card-data">
                       <span class="author">
                           <img src="{% static 'svg/avatar.svg' %}" alt="">
-                          {{ post.author }} <!-- Exibe o nome do autor -->
+                          {{ post.author }}
                       </span>
                       <span class="comments">
                           <img src="{% static 'svg/comment.svg' %}" alt="">
-                          1 <!-- Substitua por um contador real de comentários -->
+                          1
                       </span>
                       <span class="date">
                           <img src="{% static 'svg/calendar.svg' %}" alt="">
-                          {{ post.created_at }} <!-- Formata a data de criação -->
+                          {{ post.created_at }}
                       </span>
                   </div>
                   <p class="card-text">{{ post.resume }}</p>

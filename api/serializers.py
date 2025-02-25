@@ -14,4 +14,4 @@ class HighlightedPostsSerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['title', 'slug','subject', 'author', 'resume', 'content', 'created_at', 'updated_at', 'image']
+        fields = ['title', 'slug', 'author', 'subject','content', 'created_at', 'updated_at', 'image']

@@ -4,6 +4,17 @@
 
 {% block content %}
 
-<h1>Bem vindo ao post</h1>
+<article class="container">
+    <h1>{{post.title}}</h1>
+    <div class="post-data container-fluid">
+        <span class="author">Criado por: {{post.author}}</span>
+        <div>
+            <span class="created-at">Criado em: {{post.created_at}}</span>
+            <span class="updated-at">Editado em: {{post.updated_at}}</span>    
+        </div>
+    </div>
+    <img src="{{post.image}}" alt="">
+    <div class="container-fluid">{{post.content}}</div>
+</article>
 
 {% endblock %}
