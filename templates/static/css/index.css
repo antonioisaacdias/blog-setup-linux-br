@@ -9,7 +9,8 @@
     --navbar-brand-text-size-secondary: 600 1.25rem/100% var(--font-brand);
     --text-navbar-options: 1.25rem/100% var(--font-brand);
     --text-cards: 1rem/100% var(--font-interface);
-    --text-titles: 1.5rem/125% var(--font-interface);
+    --text-cards-titles: 1.5rem/125% var(--font-interface);
+    --text-titles: 600 3rem/125% var(--font-interface);
     --text-articles: .85rem/125% var(--font-articles);
 
     --brand-text-color: rgb(255, 255, 255);
@@ -155,7 +156,7 @@ body {
                             flex-direction: column;
                             text-align: left;
                             h2{
-                                font: var(--text-titles);
+                                font: var(--text-cards-titles);
                             }
                         }
     
@@ -177,7 +178,7 @@ body {
                 padding-inline: 0;
                 max-width: 100%;
                 span{
-                    font: var(--text-titles);
+                    font: var(--text-cards-titles);
                     
                 }
 
@@ -387,8 +388,6 @@ body {
     }
 }
 
-
-
 footer {
     margin-top: 2rem;
     padding-block: 1rem;
@@ -397,5 +396,51 @@ footer {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+.post-page {
+    padding-block: 1rem;
+    .post-infos{
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-bottom: 1px solid var(--text-color);
+        margin-bottom: 2rem;
+        .subject{
+            font: var(--text-cards-titles);
+            border: 2px solid var(--brand-orange-principal);
+            display: inline-block;
+            padding-inline: .3rem;
+            border-radius: .5rem;
+            font-weight: 600;
+            color: var(--brand-orange-principal);
+        }
+        h1{ 
+            font: var(--text-titles);
+            text-wrap: wrap;
+            margin-block: 1rem;
+        }
+        .author{
+            font: 600 1rem/100% var(--font-interface);
+        }
+        .dates{
+            margin-top: 1rem;
+            font: 200 1rem/100% var(--font-interface);
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-block: 1.5rem;
+        }
+
+
+    }
+    img{
+        border-radius: 0.3rem;
+        width: 100%;
+
+    }
+    .post-content{
+        font: 380 1.2rem/160% var(--font-interface);
+        color: black;
+    }
 }
 
