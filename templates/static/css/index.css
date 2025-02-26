@@ -128,12 +128,15 @@ body {
                 width: 100%;
                 background-color: black;
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                border-radius: .3rem;
+                overflow: hidden;
     
                 .carousel-inner {
                     .carousel-item {
                         width: 100%;
                         height: 23.625rem;
                         position: relative;
+                        cursor: pointer;
     
                         img {
                             width: 100%;
@@ -148,7 +151,7 @@ body {
                             padding-block: 1rem;
                             padding-inline: 2rem;
                             width: 100%;
-                            margin-bottom: 1.0rem;
+                            margin-bottom: 0.5rem;
                             z-index: 2;
                             color: white;
                             display: flex;
@@ -156,13 +159,17 @@ body {
                             flex-direction: column;
                             text-align: left;
                             h2{
-                                font: var(--text-cards-titles);
+                                font: 600 1.5rem/100% var(--font-interface);
+                            }
+                            p {
+                                font-weight: 600;
+                                color: var(--brand-orange-principal);
                             }
                         }
     
                         .blur {
                             position: absolute;
-                            height: 7rem;
+                            height: 8rem;
                             left: 0;
                             right: 0;
                             bottom: 0;
@@ -201,10 +208,12 @@ body {
                             width: 40%;
                             height: 100%;
                             object-fit: cover;
+                            border-radius: .5rem;
                         }
                         .card-content{
                             width: 60%;
                             margin-top: .5rem;
+                            padding-right: 1rem;
                             .card-data{
                                 display: flex;
                                 flex-wrap: nowrap;
@@ -263,6 +272,7 @@ body {
             align-items: center;
             padding-block: .5rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: .5rem;
     
             img{
                 height: 3.5rem;
@@ -280,13 +290,18 @@ body {
         }
     
         .contact-me {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
             background-color: var(--brand-orange-principal);
             padding-block: 1rem;
+            border-radius: .5rem;
             img {
                 width: 1.5rem;
                 margin-right: .6rem;
             }
             .text {
+                text-align: center;
                 color: var(--brand-text-color);
                 font: 600 1.5rem/100% var(--font-interface);
             }
@@ -322,6 +337,7 @@ body {
                 width: 95%;
                 overflow: hidden;
                 margin-inline: auto;
+                border: 1px solid var(--brand-selected);
                 .img-wrapper{
                     padding: 0;
                     position: relative;

@@ -12,7 +12,7 @@
       </div>
       <div class="carousel-inner">
         {% for post in carousel_posts %}
-        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <div class="carousel-item {% if forloop.first %}active{% endif %}" data-url="{% url 'post' slug=post.slug %}" onclick="window.location.href=this.dataset.url">
           <img src="{{post.image}}" class="d-block w-100" alt="...">
           <div class="blur"></div>
           <div class="carousel-caption">
@@ -43,10 +43,6 @@
                       <span class="author">
                           <img src="{% static 'svg/avatar.svg' %}" alt="">
                           {{ post.author }}
-                      </span>
-                      <span class="comments">
-                          <img src="{% static 'svg/comment.svg' %}" alt="">
-                          1
                       </span>
                       <span class="date">
                           <img src="{% static 'svg/calendar.svg' %}" alt="">
